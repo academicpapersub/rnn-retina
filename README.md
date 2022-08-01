@@ -49,5 +49,67 @@ To investigate the robustness of the retinal transformation, adversarial vurnera
 </p>
 
 
+
+
+
+## **Requirements**
+
+This repository is developed and tested under the following environments. 
+
+*   python 3.8.8
+*   pytorch 1.4.0
+*   torchvision 0.5.0
+*   advertorch 0.2.3
+*   opencv-python 4.5.1
+
+
+
+
+
+## **Datasets**
+
+
+### - ImageNet100
+ImageNet100 can be generated from ILSVRC2012 by sampling 100 classes from 1000 classes. Details can be found in the supplementary page. 
+
+## **Pretrained Model**
+You can download pretrained and trained models [here](https://drive.google.com/file/d/1RlVMn0Naf62UWLN57QtyJlBBz9H3l0b9/view?usp=sharing):
+
+The zip file downloaded includes pre-trained  model parameters. Download the zip file and unzip it in the directory `code_submission` so that it looks:
+
+```
+code_submission
+├── libs
+├── README.md
+├── <Extract zip files here>
+├── ...
+```
+
+
+
+## **Contents**
+* [Single-label Classification](#single-label-classification)
+* [Adversarial Attack](#adversarial-attack)
+
+
+
+## **Single-label Classification**
+
+### Training
+
+To train the **Retina** model, run the following command at `code_submission/`:
+
+```train
+python train.py --mode train --data_path /path/to/ImageNet100/
+```
+
+To train Retina model, we used two `RTX 2080 Ti`.
+
+
+## **Credits** ##
+Some codes for FF-CNN are from the [official pytorch example](https://github.com/pytorch/examples/blob/master/imagenet/main.py)
+
+
+
 ## ToDo
 - Upload code and pre-trained data
